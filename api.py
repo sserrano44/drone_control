@@ -56,10 +56,10 @@ class RC(threading.Thread):
                         continue
 
                 last_command = time.time()
-                print "got command: %s" % command
                 if not command or not 'action' in command:
                     continue
 
+                print "got command: %s" % command
                 if command['action'] == 'arm':
                     board.arm()
                     armed = True
